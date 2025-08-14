@@ -14,3 +14,7 @@
   --color-background-primary: #f5f7ff;
   --color-border: #acacac;
 }
+
+body {
+  background-color: chocolate;
+}
