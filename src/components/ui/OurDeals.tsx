@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function OurDeals({ color }: { color: string }) {
+export default function OurDeals({ color }: { color?: string }) {
   return (
     <div
       className={`p-2 bg-transparent rounded-full px-6 md:hidden ${

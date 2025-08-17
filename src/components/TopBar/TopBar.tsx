@@ -9,7 +9,7 @@ const TopBar = async () => {
   const { data: shopInfo } = await supabase.from('shop_info').select('*').single();
 
   return (
-    <div className="bg-black text-white text-xs py-2 font-poppins">
+    <div className="bg-black text-white text-xs py-2">
       <Container>
         <div className="mx-auto flex justify-between items-center">
           {shopInfo && <ShopInfoPopover shopInfo={shopInfo} />}

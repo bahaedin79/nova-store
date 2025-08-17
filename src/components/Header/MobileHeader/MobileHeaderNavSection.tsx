@@ -3,18 +3,17 @@ import OurDeals from '@/components/ui/OurDeals';
 import { Menu, ShoppingCart, UserRound } from 'lucide-react';
 import Logo from '@/assets/images/logo.png';
 import Image from 'next/image';
-import React from 'react';
 import SearchBar from './SearchBar';
 
-interface MobileHeaderNavSectionProps {
-  onMenuClick: () => void;
-}
+type Props = {
+  setIsMenuOpen: (isOpen: boolean) => void;
+};
 
-export default function MobileHeaderNavSection({ onMenuClick }: MobileHeaderNavSectionProps) {
+export default function MobileHeaderNavSection({ setIsMenuOpen }: Props) {
   return (
     <Container>
-      <div className="flex justify-evenly items-center gap-10 sm:justify-between ">
-        <button onClick={onMenuClick} className="p-2">
+      <div className="flex justify-between items-center md:gap-4">
+        <button className="p-2" onClick={() => setIsMenuOpen(true)}>
           <Menu size={24} strokeWidth={3} />
           <span className="sr-only">Open menu</span>
         </button>
